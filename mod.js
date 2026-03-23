@@ -31,10 +31,13 @@ const activateUrlbarWithPercent = () => {
   }
 };
 
-// Asegurar que el script corre en el contexto correcto
-if (document.location.protocol === "about:" || document.location.protocol === "chrome:") {
-  // Escuchar el evento global de teclado
+// Asegurar que solo se corre en la UI del navegador (not in web pages)
+if (
+  document.location.protocol === "about:" ||
+  document.location.protocol === "chrome:"
+) {
   document.addEventListener("keydown", (e) => {
+    // Evitar conflicto dentro de campos de texto / editable
     const inInput =
       e.target instanceof HTMLInputElement ||
       e.target instanceof HTMLTextAreaElement ||
@@ -42,8 +45,9 @@ if (document.location.protocol === "about:" || document.location.protocol === "c
 
     if (inInput) return;
 
-    if (e.key === " " && e.shiftKey) {
-      e.preventDefault();
+    // Atajo: Ctrl + Space
+    if (e.key === " " && e.ctrlKey && !e.shiftKey && !e.altKey && !e.metaKey) {
+      e.preventDefault(); // Evitar desplazamiento de página
       activateUrlbarWithPercent();
     }
   });
