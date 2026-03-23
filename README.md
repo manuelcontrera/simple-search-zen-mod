@@ -1,13 +1,13 @@
-# 🌿 Zen Browser Mod: Simple Search
+# Simple Search — Zen Browser Mod
 
-Presiona la tecla **Espacio** (fuera de campos de texto en la página) para:
-- Enfocar la barra de URL de Zen Browser.
-- Escribir automáticamente el símbolo `% ` listo para una búsqueda rápida.
+Press **Ctrl+Space** (or **Shift+Space**) to instantly activate
+tab search (`%`) in the Zen Browser URL bar.
 
-Desarrollado por **manuelcontrera**.
+## Install via Sine
+1. Open Sine in Zen Browser.
+2. Go to **Marketplace → Install from GitHub**.
+3. Paste: `https://github.com/manuelcontrera/Simple-Search-Zen`
+4. Confirm and activate.
 
-## 📦 Instalar con Sine
-
-1. Abre **Sine** en Zen Browser.
-2. Ve a **Mods** → **Install from GitHub**.
-3. Pega el enlace de este repositorio:
+## Author
+manuelcontrera
