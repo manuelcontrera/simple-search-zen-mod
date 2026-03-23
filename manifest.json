@@ -1,0 +1,20 @@
+{
+  "manifest_version": 2,
+  "name": "Simple Search",
+  "version": "1.0.0",
+  "description": "Press Space to focus Zen URL bar and insert \"% \" for quick search.",
+  "applications": {
+    "gecko": {
+      "id": "simple-search@zenmods.local"
+    }
+  },
+  "content_scripts": [
+    {
+      "matches": ["about:blank", "about:zen"],
+      "js": ["mod.js"],
+      "all_frames": false,
+      "run_at": "document_start"
+    }
+  ],
+  "permissions": []
+}
