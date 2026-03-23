@@ -1,0 +1,27 @@
+{
+  "name": "Simple Search",
+  "description": "Press Ctrl+Space to activate tab search with % in the URL bar",
+  "version": "2.0.0",
+  "author": "manuelcontrera",
+  "tags": ["keyboard", "search", "tabs", "productivity"],
+  "readme": "README.md",
+  "homepage": "https://github.com/manuelcontrera/Simple-Search-Zen",
+  "preferences": [
+    {
+      "property": "simple-search-shortcut",
+      "label": "Shortcut key",
+      "type": "select",
+      "options": [
+        { "label": "Ctrl + Space", "value": "ctrl" },
+        { "label": "Shift + Space", "value": "shift" }
+      ],
+      "defaultValue": "ctrl"
+    }
+  ],
+  "files": [
+    {
+      "source": "simpleSearch.uc.js",
+      "destination": "JS"
+    }
+  ]
+}
